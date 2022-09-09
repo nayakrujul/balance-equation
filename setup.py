@@ -1,17 +1,17 @@
 from setuptools import setup, find_packages
 
-long_description = 'Shorten your Python code with shorter syntax - read the docs at https://www.github.com/nayakrujul/python-plus'
+long_description = 'Balance chemical reaction equations - read the docs at https://www.github.com/nayakrujul/balance-equation'
 
 setup(
-  name = 'shorter-python',
-  version = '5.0',
+  name = 'balance-equation',
+  version = '0.1',
   license='Apache',
-  description = 'Shorten your Python code with shorter syntax.',
+  description = 'Balance chemical reaction equations',
   author = 'Rujul Nayak',
   author_email = 'rujulnayak@outlook.com',
-  url = 'https://github.com/nayakrujul/python-plus',
-  download_url = 'https://github.com/nayakrujul/python-pluso/archive/refs/tags/v_01.tar.gz',
-  keywords = ['shorter', 'syntax'],
+  url = 'https://github.com/nayakrujul/balance-equation',
+  download_url = 'https://github.com/nayakrujul/balance-equation/archive/refs/tags/v_01.tar.gz',
+  keywords = ['balance', 'equation', 'reaction', 'chemistry'],
   install_requires=[
       ],
   classifiers=[
@@ -32,7 +32,7 @@ setup(
   packages = find_packages(),
   entry_points = {
     'console_scripts': [
-      'pythonplus = python_plus.compiler:from_file'
+      'balance = balance.cmdline:interface'
     ]
   }
 )
