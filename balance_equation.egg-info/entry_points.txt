@@ -1,3 +1,2 @@
 [console_scripts]
 balance = balance.cmdline:interface
-
