@@ -16,4 +16,4 @@ def interface():
         print("Couldn't brute-force this.")
         return 1
     print("Multipliers:", *sol)
-    print("Equation:", ' -> '.join(_interface(args.left[0], args.right[0])))
+    print("Equation:", ' -> '.join(_interface(args.left[0], args.right[0], lim)))
