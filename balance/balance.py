@@ -1,5 +1,6 @@
 from itertools import product
 from collections import defaultdict
+import re
 
 def count_up(p, q, r):
     return product(*[range(p,q+1)]*r)
@@ -35,8 +36,10 @@ def process(s):
             r[-1] += '_' + c
     if r and '_' not in r[-1]:
         r[-1] += '_1'
-    return ' '.join(r)
-
+    s = ' '.join(r)
+    while (q := re.sub(r'(\d)_(\d)', r'\1\2', s)) != s:
+        s = q
+    return s
 
 def interface(l, r, lim=10):
     ls, rs = l.replace(' ', '').split('+'), r.replace(' ', '').split('+')
